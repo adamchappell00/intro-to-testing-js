@@ -19,3 +19,20 @@ function isEven(input){
         return input % 2 === 0;
     }
 }
+function isVowel(input){
+    if(typeof input !== 'string' || input.length > 1){
+        return false;
+    } else if (input === 'a' || input === 'A'){
+        return true;
+    } else {
+        return false;
+    }
+}
+function add(num1,num2){
+    var added = parseFloat(num1) + parseFloat(num2);
+    if(typeof num1 == 'undefined' || typeof num2 == 'undefined'){
+        return NaN;
+    } else if(typeof added == "number") {
+        return added;
+    }
+}
