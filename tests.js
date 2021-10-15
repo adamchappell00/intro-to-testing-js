@@ -22,7 +22,7 @@ describe('helloWorld', function() {
 
 describe('sayHello', function() {
     it('should be a defined function', function() {
-        expect(typeof sayHello()).toBe("string");
+        expect(typeof sayHello).toBe('function');
     })
     it('should return a string when called', function() {
         expect(typeof sayHello()).toBe("string");
@@ -57,5 +57,19 @@ describe('sayHello', function() {
     });
     it('should return the string of "Hello World!" when executed with an Object that is not undefined', function() {
         expect(sayHello(myObject)).toBe("Hello World!");
+    });
+})
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean value', function() {
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('should return true when executed with the number 5', function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it("should return true when executed with the string of '5'", function() {
+        expect(isFive("5")).toBe(true);
     });
 })
