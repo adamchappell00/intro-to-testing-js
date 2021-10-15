@@ -19,7 +19,10 @@ describe('sayHello', function() {
         expect(typeof sayHello()).toBe("string");
     })
     it('should return a string when called', function() {
-        expect(typeof helloWorld()).toBe("string");
+        expect(typeof sayHello()).toBe("string");
+    });
+    it("should never return 'undefined' when called", function() {
+        expect(sayHello()).not.toBe(undefined);
     });
     it('should return the string that contains the word "Hello" when executed', function() {
         expect(sayHello()).toContain("Hello");
